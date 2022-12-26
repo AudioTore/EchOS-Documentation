@@ -27,8 +27,7 @@ Once Cosmos is installed you should see a Cosmos C# template
 
 ![image](https://user-images.githubusercontent.com/117720256/209566536-202db99f-9fb5-492b-8db2-a3ce459c21ae.png)
 
-Go ahead and downloading EchOS on our releases tab and download the source code.
-Then click on the EchOS.sln project. Then go ahead and compile. BUT you need
+Go ahead and download EchOS on our releases tab and Then click on the EchOS.sln project in the newly downloaded EchOS Folder. Then go ahead and build. BUT you need
 VMWARE 2022.
 
 If all goes well you should see EchOS booting up.
