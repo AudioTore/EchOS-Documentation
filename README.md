@@ -1,36 +1,53 @@
-# EchOS-Documentation
+EchOS is an operating system licensed under the gnu public v2.
 
-#### How to install EchOS
+About:
+EchOS is designed to simulate DOS all over again.
 
-to only way to run EchOS at the moment is by 
-installing Cosmos (Operating system development kit)
-Cosmos is what enables EchOS to be developed.
-https://github.com/CosmosOS/Cosmos
+Install:
 
-Go ahead and install Cosmos's userkit using the following Link.
+Virtualbox:
+You should see an ISO Called: EchOS.iso .
+Where in order to run on virtualbox
+you have to run this command:
+VBoxManage convertfromraw --format VDI [filename].img [filename].vdi
 
-https://github.com/CosmosOS/Cosmos/releases/download/UserKit_20221121/CosmosUserKit-20221121-vs2022.exe
+[filename] - "EchOS.iso"
+[filename(2)] - "EchOS.vdi"
 
-Only install if you have the following:
-Visual studio 2022
-Visual studio .NET Desktop environment.
-VMWARE 2022 (free)
+qemu:
 
-![image](https://user-images.githubusercontent.com/117720256/209566380-a4951d2d-cd3f-4887-afea-07f807475225.png)
+Running this in qemu is pretty straight forward!
+qemu-system-x86_64 EchOS.iso -m 2000 (in the same directory)
 
+-m 2000 (gives 2G's of memory. Without giving qemu some 
+memory it can result in a kernel panic )
 
-Visual studio Extension Development
+vmware:
+Running this in vmware should be as simple as popping in the ISO.
+However if this doesn't work you may have to convert to an VMDK.
 
-![image](https://user-images.githubusercontent.com/117720256/209566409-70ba7060-1455-4574-85a1-52e831cbfa16.png)
+Bare metal:
+Pretty easy! Just burn the iso to an CD/USB
+then go into bios and boot from the CD/USB.
 
-Once Cosmos is installed you should see a Cosmos C# template
+Note: if you see a debian grub menu press enter.
+EchOS is built on java and it uses debian as a 
+base to startup the java virtual machine 
+in order to run the bytecode.
 
-![image](https://user-images.githubusercontent.com/117720256/209566536-202db99f-9fb5-492b-8db2-a3ce459c21ae.png)
+Also if you don't see the CD/USB showing the boot options
+make sure legacy boot is ticked on!
 
-Go ahead and download EchOS on our releases tab and Then click on the EchOS.sln project in the newly downloaded EchOS Folder. Then go ahead and build. BUT you need
-VMWARE 2022.
+Native:
 
-If all goes well you should see EchOS booting up.
+In case you don't have Java you can always use the bootable iso version.
+However if you do have java then Native can work out!
+The native version is exactly the same however instead of booting
+into an entirely new OS you run this command to boot up the OS:
 
+java -jar EchOS.jar (Jar file is located in the native folder)
 
+Note: fullscreen for an full DOS Experience!
 
+I hope you enjoy EchOS and updates are there on our offical github
+page at least every month!
